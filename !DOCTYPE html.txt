@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Interativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 18px;
+        }
+        img {
+            width: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ff4b3e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Meu Site!</h1>
+    <p>Este é um site interativo que eu criei 😄</p>
+    
+    <img src="https://i.imgur.com/4AiXzf8.jpeg" alt="Foto bonita">
+
+    <br>
+    <button onclick="mudarMensagem()">Clique em mim!</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        function mudarMensagem() {
+            const mensagens = [
+                "Você é incrível! 🌟",
+                "Hoje é um ótimo dia para aprender! 📚",
+                "Nunca pare de sonhar! ✨",
+                "Sorria, você é especial! 😄"
+            ];
+            let aleatorio = Math.floor(Math.random() * mensagens.length);
+            document.getElementById("mensagem").textContent = mensagens[aleatorio];
+        }
+    </script>
+</body>
+</html>
